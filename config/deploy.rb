@@ -23,6 +23,7 @@ end
 	after :finishing, 'deploy:cleanup'
 end
 
+
 namespace :tasks do
   desc 'Rake assets:clean'
   task :clean do
