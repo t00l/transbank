@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token, only: [:confirmation]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -10,7 +11,7 @@ class ProductsController < ApplicationController
   def pay
     @product= Product.find(params[:id])
 
-    @payment = Payment.new
+    @payment = Payment.create
 
     @payment.order_id  = @payment.id.to_s + SecureRandom.random_number(10).to_s
     @payment.session_id = SecureRandom.random_number(10).to_s
