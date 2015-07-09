@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
 
   def confirmation
     logger.info "Hola me estoy llamando"
-    render text: "1"
+    render text: "ACEPTADO"
   end
 
   # GET /products/1
