@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+   post 'products/confirmation'
    get 'products/pay'
   resources :products
   # The priority is based upon order of creation: first created -> highest priority.
@@ -27,7 +28,8 @@ Rails.application.routes.draw do
   #     collection do
   #       get 'sold'
   #     end
-  #   end
+  #   endout
+  
 
   # Example resource route with sub-resources:
   #   resources :products do
