@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
     @payment.session_id = SecureRandom.random_number(10).to_s
     @payment.amount = @product.price
     @payment.status = false
+    @payment.product = @product
     @payment.save
     
     @tbk_tipo_transaccion = "TR_NORMAL"
